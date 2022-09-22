@@ -83,7 +83,7 @@ body{
 .price-now{
     font-family:var(--font-fraunces);
     color: var(--color-Dark-cyan);
-    font-size: 25px;
+    font-size: 26px;
     padding-right:25px;
 }
 
@@ -101,6 +101,7 @@ body{
     font-size: 14px;
     font-weight: 700;
     cursor: pointer;
+    width:100%;
 }
 
 .cart:hover{
@@ -114,7 +115,62 @@ body{
 
 
 .footer {
+    font-family: var(--font-montserrat);
+    font-size:small;
     position:absolute;
     text-align: center;
-    bottom: 0; 
+    bottom: 5px; 
+}
+
+
+@media only screen and (max-width: 628px){
+    .box{
+        grid-template-columns: 1fr;
+    }
+
+    .footer{
+        display:none;
+        }
+
+    .image img {
+        max-height: 450px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .content-card{
+        display: block;
+    }
+
+    .product-category, .product-name, .product-description, .price{
+        padding-bottom: 23px;
+    }
+
+}
+
+@media only screen and (max-width: 375px){
+    .container{
+        margin: 15px auto;
+        padding: 0 15px;
+    }
+
+    .image img{
+        max-height: 280px;
+    }
+
+    .content-card{
+        padding: 24px;
+    }
+
+    .product-category, .product-name, .product-description, .price{
+        padding-bottom: 15px;
+    }
+
+    .product-name{
+        font-size: 30px;
+    }
+    
+    
+
+
 }
